@@ -1,0 +1,345 @@
+// ion-content{
+//  --background: #3880ff;
+// }
+.border {
+    border: 1px solid lightgray;
+    border-radius: 8px;
+}
+
+.welcomeTitle {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.registerbutton {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    color: forestgreen;
+    padding-top: 20px;
+    padding-bottom: 150px;
+}
+
+.welcomeTitle {
+    color: forestgreen;
+    display: flex;
+    font-size: 25px;
+    // font-style: Sacramento;
+    font-family: Nunito;
+    justify-content: center;
+    align-self: center;
+}
+
+ion-slides {
+    --text-align: center;
+    height: 100%;
+    color: forestgreen;
+    --bullet-background: gray;
+    --bullet-background-active: forestgreen;
+}
+
+ion-slider-pager {
+    --moz-list-bullet-color: forestgreen;
+}
+
+.img {
+    height: 200px;
+}
+
+.img2 {
+    height: 250px;
+    padding-top: 10px;
+    // padding-bottom: 50px;
+}
+
+.img3 {
+    height: 150px;
+    //padding-top: 10px;
+}
+
+.img4 {
+    height: 100px;
+    //padding-top: 10px;
+}
+
+agm-map {
+    height: 200px;
+    border-radius: 10px;
+}
+
+ion-slide {
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.Emailslide {
+    padding-right: 30px !important;
+    padding-left: 30px !important;
+    //padding-top: 100px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    width: 100%
+}
+
+.nextbutton {
+    color: forestgreen;
+    padding-top: 150px;
+    padding-left: 250px;
+    padding-right: 50px;
+    font-family: Nunito;
+}
+
+.next {
+    font-family: Nunito;
+}
+
+ion-button {
+    color: forestgreen;
+}
+.savehours{
+        background-color:forestgreen;
+    
+}
+.prevbutton {
+    padding-top: 30px;
+    padding-right: 250px;
+    padding-left: 30px;
+    padding-bottom: 80px;
+}
+
+.nextprev {
+    padding-top: 80px;
+    padding-bottom: 50px;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.checkbox {
+    // padding-right: 30px;
+    padding-left: 30px;
+    justify-content: center;
+}
+
+// .next1 {
+//     padding-top: 100px;
+//     padding-left: 250px;
+// }
+// .prev1 {
+//     padding-top: 150px;
+//     padding-right: 250px;
+// }
+.or {
+    color: white
+}
+
+.categories {
+    color: forestgreen;
+    font-size: 22px;
+    font-family: Nunito;
+    padding-right: 1px;
+    padding-left: 1px;
+}
+
+.inputText{
+    text-align: left;
+}
+
+ion-note {
+    color: black;
+    //font-style: Sacramento;
+    font-family: Nunito;
+    font-size: 17px;
+}
+
+.note {
+    font-size: 22px;
+    font-family: Nunito;
+}
+
+.namemon {
+    color: black;
+    margin-top: 8px;
+}
+
+.time {
+    padding-top: 50px;
+    padding-left: 2px;
+}
+
+.note2 {
+    // color: limegreen;
+    padding-top: 30px;
+    padding-bottom: 60px;
+    color: forestgreen;
+}
+
+.BName {
+    padding-right: 30px !important;
+    padding-left: 30px !important;
+    padding-top: 60px;
+    //padding-bottom: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    width: 100%
+}
+
+.BNameinsta {
+    padding-right: 30px !important;
+    padding-left: 30px !important;
+    //padding-top: 60px;
+    //padding-bottom: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    width: 100%
+}
+
+// .latlong {
+//     padding-top: 80px;
+//     //padding-bottom: 0px;
+// }
+.selectam {
+    color: black;
+    // border: 1px solid black;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 5px;
+    margin-right: 2px;
+    margin-bottom: 2px;
+}
+
+.selectam1 {
+    color: black;
+    // border: 1px solid cyan;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 2px;
+    margin-right: 2px;
+    display: flex;
+}
+
+.selectpm1 {
+    color: black;
+    //border: 1px solid cyan;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.selectpm {
+    color: black;
+    // border: 1px solid cyan;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.hoursaving {
+    padding-top: 20px;
+}
+
+.choosecat {
+    border: 1px solid lightseagreen;
+    //padding-right: 20px;
+}
+
+.nextprev1 {
+    padding-top: 40px;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.nextprev2 {
+    // padding-top: 100px;
+    padding-bottom: 70px;
+}
+
+.bgcolor {
+    background-color: slateblue;
+    height: 100px;
+}
+
+.skipbutton {
+    padding-bottom: 20px;
+    padding-left: 200px;
+    padding-top: 30px;
+}
+
+/* Address-Block */
+
+.cardAddress{
+    box-shadow: none !important;
+}
+
+.greenColor{
+    color: forestgreen;
+}
+
+.headSize{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+ion-searchbar.input{
+    --border-radius: 9px;
+    text-align: left;
+    --background: white;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.locTitle{
+    font-weight: bold;
+}
+
+.btnSubmit{
+    --border-radius: 5px;
+    --background: forestgreen;
+    color: white;
+}
+
+.btnAdd{
+    --border-radius: 5px;
+}
+
+.typeText{
+    border-bottom: 1px solid gray;
+}
+
+ion-checkbox{
+    --background-checked: #228B22; 
+    //--border-color: #228B22;
+    --border-color-checked: transparent !important;
+}
+
+.btnNext{
+    --background: #228B22;
+    color: white;
+    border-radius: 15px;
+}
+
+
+.suc{
+    color: forestgreen;
+    font-size: 3.5vh;
+    font-weight: bold;
+}
+.register{
+    color: forestgreen;
+    font-family:'Noto sans JP', sans-serif;
+    font-weight: bold;
+    align-self: center;
+    margin-top: 10px;
+    font-size: 5vh;
+    box-shadow: none;
+}
