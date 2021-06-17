@@ -3,19 +3,9 @@
     border-radius: 2.5vh;
 }
 
-.welcomeTitle {
-    color: white;
-    align-self:center ;
-    font-family: sans-serif;
-    font-weight: 400;
-    padding: 5vh;
-    margin-top: -10vh;
-    color: forestgreen;
-
-}
 .suc{
     color: forestgreen;
-    font-size: 3.5vh;
+    font-size: 16px;
     font-weight: bold;
 }
 .register{
@@ -24,29 +14,8 @@
     font-weight: bold;
     align-self: center;
     margin-top: 10px;
-    font-size: 5vh;
+    font-size: 20px;
     box-shadow: none;
-}
-.registerbutton {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    color: white;
-    padding-top: 2vh;
-    padding-bottom: 1vh;
-    ion-button{
-    color: white;
-    background: forestgreen;
-    }
-}
-.welcomeTitle {
-    color: forestgreen;
-    display: flex;
-    font-size: 25px;
-    font-family: sans-serif;
-    justify-content: center;
-    font-weight: 400;
-    align-self: center;
 }
 .container-form-btn{
     display: inline-block;
@@ -73,12 +42,6 @@
     background-color: forestgreen;
     transform: translate(2vh);
 }
-
-.msg{
-    font-family: 'Noto sans JP', sans-serif;
-    font-weight: 400;
-    font-size: 3.5vh;
-}
 ion-slides {
     --text-align: center;
     height: 100%;
@@ -96,6 +59,7 @@ ion-slider-pager {
    // width: 350px;
     align-self: center;
     margin-top: 16vh;
+    margin-left: -26px;
 }
 .img {
    
@@ -159,7 +123,7 @@ ion-slide {
 
 ion-button {
     color: forestgreen;
-    font-size: 2.5vh;
+    font-size: 12px;
 
 }
 
@@ -185,7 +149,7 @@ ion-button {
 
 .categories {
     color: forestgreen;
-    font-size: 4vh;
+    font-size: 16px;
     font-family: 'Roboto Mono', monospace;
     font-weight: 400;
     padding-right: 1vh;
@@ -201,11 +165,11 @@ ion-note {
     //font-style: Sacramento;
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: 400;
-    font-size: 8vh;
+    font-size: 20px;
 }
 
 .note {
-    font-size: 3vh;
+    font-size: 20px;
     font-family: 'Noto Sans JP', sans-serif;
     color: #000;
     font-weight: bold;
@@ -262,8 +226,9 @@ ion-note {
     border-width: 0.2vh;
     color: rgb(3,15,7);
     border-radius: 2vh;
-    font-size: 2.5vh;
-    width: 60%;
+    font-size: 14px;
+    height: 40px;
+    width: 100px;
     margin-top: 10px;
 }
 .selectam {
@@ -351,22 +316,22 @@ ion-note {
 
 .greenColor{
     color: black;
-    font-size:3vh;
+    font-size:14px;
 }
 .headsize{
-    font-size: 3vh;
+    font-size: 20px;
     color: forestgreen;
 }
 
 .green{
     font-weight: 700;
     color: forestgreen;
-    font-size: 4vh;
+    font-size: 20px;
     font-family: sans-serif;
     box-shadow:none;
 }
 .headSize{
-    font-size: 3vh;
+    font-size: 14px;
     font-weight: 600;
     font-family: sans-serif;
     margin-top: 9vh;
@@ -377,7 +342,7 @@ ion-searchbar.input{
   --background: white;
     font-weight: 600;
  --border-radius: 5vh;
-    font-size: 10vh;
+    font-size: 20px;
     font-weight: 400;
 }
 
@@ -385,7 +350,7 @@ ion-searchbar.input{
     font-weight: bold;
 }
 .cat{
-    font-size: 3vh;
+    font-size: 14px;
     font-family: sans-serif;
     color: black;
     font-weight: 600;
@@ -417,29 +382,29 @@ ion-checkbox{
 }
 .green1{
     font-family: 'Noto ' sans-serif;
-    font-size: 4vh;
+    font-size: 20px;
     font-weight: 400;
     color: forestgreen;
 }
 .cat1{
     font-family:'Noto ' sans-serif ;
-    font-size:3.5vh;
+    font-size:16px;
     color: darkred;
     font-weight: 600;
 }
 .ser{
     font-weight: bolder;
     font-family: sans-serif;
-    font-size: 2.5vh;
+    font-size: 14px;
     color: black;
 }
 .price{
     font-family: sans-serif;
-    font-size: 2vh;
+    font-size: 14px;
     font-weight: 450;
 }
 .note1{
-    font-size: 4vh;
+    font-size: 20px;
     font-family: 'Noto Sans JP', sans-serif;
     color: forestgreen;
     font-weight: 500;
@@ -452,4 +417,7 @@ ion-checkbox {
      --background-checked: forestgreen;
      --background-color:white;
      --border-color:forestgreen;
+}
+.mon{
+    
 }

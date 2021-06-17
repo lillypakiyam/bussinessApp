@@ -1,23 +1,23 @@
 <ion-content class="">
     <ion-slides pager="true" #slides [options]="slideOpts">
-        <ion-slide class="welcomeTitle">
+        <ion-slide>
             <ion-content>
-            <div class="img">
-                <img src="assets/wel.png" alt="saloon-logo">
-            </div>
-            <p class="suc">You've logged in successfully.</p>
-        </ion-content>
-        <ion-footer class="ion-no-border">
-            <div class="nextbutton">
-                <ion-button type="button" fill="clear" (click)="slides.slideNext()">Next
-                    <ion-icon name="chevron-forward"></ion-icon>
-                </ion-button>
-           </div>
-        </ion-footer>
+                <ion-card  class="register">
+                    <div class="img">
+                        <img src="assets/wel.png" alt="saloon-logo">
+                    </div>
+                    <p class="suc">You've logged in successfully.</p>
+                </ion-card>
+            </ion-content>
+            <ion-footer class="ion-no-border">
+                    <ion-button type="button" fill="clear" (click)="slides.slideNext()">Next
+                        <ion-icon name="chevron-forward"></ion-icon>
+                    </ion-button>
+            </ion-footer>
         </ion-slide>
 
 
-        <ion-slide class="welcomeTitle">
+        <ion-slide>
             <ion-content>
                 <ion-card class="register">
                 <label class="register">Registration</label>
@@ -230,13 +230,15 @@
                     </ion-grid>
                 </ion-card>
             </ion-content>
-            <ion-footer class="ion-padding-vertical ion-padding-horizontal ion-no-border">
-                <ion-button fill="none" [color]="'#228B22'" (click)="slides.slidePrev()" class="textBold ion-text-uppercase ion-padding-horizontal ">
+            <ion-footer class="ion-no-border">
+                <div class="next">                
+                    <ion-button fill="none" [color]="'#228B22'" (click)="slides.slidePrev()" class="textBold ion-text-uppercase">
                     <ion-icon name="chevron-back"></ion-icon>Prev
                 </ion-button>
-                <ion-button class="btnSubmit textBold ion-text-uppercase ion-padding-horizontal" (click)="slides.slideNext()">
+                <ion-button class="btnSubmit textBold" (click)="slides.slideNext()">
                     <ion-icon name="add-sharp"></ion-icon> Address
                 </ion-button>
+            </div>
             </ion-footer>
         </ion-slide>
 
@@ -277,11 +279,12 @@
                     </ion-grid>
                 </ion-card>
             </ion-content>
-            <ion-footer class="ion-padding-vertical ion-padding-horizontal ion-no-border">
-                <ion-button fill="none" [color]="'#228B22'" (click)="slides.slidePrev()" class="textBold ion-text-uppercase ion-padding-horizontal ">
+            <ion-footer class="ion-no-border">
+
+                <ion-button fill="none" [color]="'#228B22'" (click)="slides.slidePrev()" class="textBold ion-text-uppercase">
                     <ion-icon name="chevron-back"></ion-icon>Prev
                 </ion-button>
-                <ion-button class="btnSubmit textBold ion-text-uppercase ion-padding-horizontal" (click)="editedAddress(slides)">
+                <ion-button class="btnSubmit textBold ion-text-uppercase" (click)="editedAddress(slides)">
                     Continue
                 </ion-button>
             </ion-footer>
@@ -330,11 +333,11 @@
                     </ion-grid>
                 </ion-card>
             </ion-content>
-            <ion-footer class="ion-padding-vertical ion-padding-horizontal ion-no-border">
-                <ion-button fill="none" [color]="'#228B22'" (click)="slides.slidePrev()" class="textBold ion-text-uppercase ion-padding-horizontal ">
+            <ion-footer class="ion-no-border">
+                <ion-button fill="none" [color]="'#228B22'" (click)="slides.slidePrev()" class="textBold ion-text-uppercase">
                     <ion-icon name="chevron-back"></ion-icon>Prev
                 </ion-button>
-                <ion-button class="btnSubmit textBold ion-text-uppercase ion-padding-horizontal" (click)="nxtCategory(slides)">
+                <ion-button class="btnSubmit textBold ion-text-uppercase" (click)="nxtCategory(slides)">
                     Continue
                 </ion-button>
             </ion-footer>
@@ -410,11 +413,11 @@
                     </div>
                 </ion-card>
             </ion-content>
-            <ion-footer class="ion-padding-vertical ion-padding-horizontal ion-no-border">
-                <ion-button fill="none" [color]="'#228B22'" (click)="savePrevService(slides)" class="textBold ion-text-uppercase ion-padding-horizontal ">
+            <ion-footer class="ion-no-border">
+                <ion-button fill="none" [color]="'#228B22'" (click)="savePrevService(slides)" class="textBold ion-text-uppercase">
                     <ion-icon name="chevron-back"></ion-icon>Prev
                 </ion-button>
-                <ion-button class="btnSubmit textBold ion-text-uppercase ion-padding-horizontal" (click)="saveService(slides)">
+                <ion-button class="btnSubmit textBold ion-text-uppercase" (click)="saveService(slides)">
                     Save
                 </ion-button>
             </ion-footer>
@@ -446,16 +449,18 @@
             </ion-card>    
 
                 <ion-row>
+                    
                     <ion-item lines="none" class="d-flex align-items-center justify-content-center">
-                        <ion-label>Monday</ion-label>
+                        <ion-label style="font-size: 12px;font-weight: 600;">Monday</ion-label>
                         <ion-checkbox value="Monday" checked="false" (ionChange)="onSelecteCheckBox($event)" slot="start">
                         </ion-checkbox>
                     </ion-item>
-
+                   
+                    
                     <form [formGroup]="myTimeFormMon" class="d-flex flex-column justify-content-center align-items-center">
-                        <div class="d-flex justify-content-between align-items-center" *ngFor="let control of myTimeFormMon.controls | keyvalue; let i=index" style="padding-right: 9px; padding-left: 35px;">
+                        <div class="d-flex justify-content-between align-items-center" *ngFor="let control of myTimeFormMon.controls | keyvalue; let i=index" style="padding-right: 2px; padding-left: 20px;">
                             <!-- <ion-label class="form-control" (click)="Mondaytime()">{{value2}}</ion-label> -->
-                            <ion-input *ngIf="checked" size="4" class="form-control" (click)="Mondaytime()" [formControlName]="control.key" style="padding-bottom: 5px; padding-top: 5px; width: 110px; height: 35px;">
+                            <ion-input *ngIf="checked" size="4" class="form-control" (click)="Mondaytime()" [formControlName]="control.key" style="padding-bottom: 5px;padding-top: 5px;width: 82px;font-size: 10px;height: 20px;">
                                 {{value2}}
                             </ion-input>
                             <ion-icon *ngIf="checked" style="margin-left: 0.25rem; color:red;" (click)="removeControlTime1(control)" name="close-circle"></ion-icon>
@@ -463,26 +468,26 @@
                     </form>
                     
                     <div *ngIf="!checked" class="d-flex align-items-center">
-                        <ion-label>Closed</ion-label>
+                        <ion-label style="font-size: 12px;font-weight: 600; padding-left: 2px;">Closed</ion-label>
                     </div>
 
                     <div *ngIf="checked" class="addbutton d-flex align-items-center flex-column justify-content-center">
-                        <ion-icon name="add-outline" style="color: forestgreen;padding-left:3px; padding-right:2px ; size: 13px;" (click)="addControltime1()"></ion-icon>
+                        <ion-icon name="add-outline" style="color: forestgreen;padding-left: 2px; padding-right:2px ; size: 13px;" (click)="addControltime1()"></ion-icon>
                     </div>
                 </ion-row>
 
 
                 <ion-row>
                     <ion-item lines="none" class="d-flex align-items-center justify-content-center">
-                        <ion-label>Tusday</ion-label>
+                        <ion-label style="font-size: 12px;font-weight: 600;">Tusday</ion-label>
                         <ion-checkbox checked="false" value="Tuesday" (ionChange)="onSelectTusday($event)" color="primary" slot="start">
                         </ion-checkbox>
                     </ion-item>
 
                     <form [formGroup]="myTimeForm" class="d-flex flex-column justify-content-center align-items-center">
-                        <div class="d-flex justify-content-between align-items-center" *ngFor="let control of myTimeForm.controls | keyvalue; let i=index" style="padding-right: 9px; padding-left: 40px;">
+                        <div class="d-flex justify-content-between align-items-center" *ngFor="let control of myTimeForm.controls | keyvalue; let i=index" style="padding-right: 2px; padding-left: 23px;">
                             <!-- <ion-label class="form-control" (click)="Tusdaytime()">{{value3}}</ion-label> -->
-                            <ion-input *ngIf="checked1" size="4" class="form-control" (click)="Tusdaytime()" style="padding-bottom: 5px; padding-top: 5px; width: 110px; height: 35px;">
+                            <ion-input *ngIf="checked1" size="4" class="form-control" (click)="Tusdaytime()" style="padding-bottom: 5px;padding-top: 5px;width: 82px;font-size: 10px;height: 20px;">
                                 {{value3}}
                             </ion-input>
                             <ion-icon *ngIf="checked1" style="margin-left: 0.25rem; color: red;" (click)="removeControlTime(control)" name="close-circle">
@@ -491,24 +496,24 @@
                     </form>
 
                     <div *ngIf="!checked1" class="d-flex align-items-center">
-                        <ion-label>Closed</ion-label>
+                        <ion-label style="font-size: 12px;font-weight: 600;padding-left: 2px;">Closed</ion-label>
                     </div>
 
                     <div *ngIf="checked1" class="addbutton d-flex align-items-center flex-column justify-content-center">
-                        <ion-icon name="add-outline" style="color: forestgreen;padding-left:3px; padding-right:2px ; size: 13px;" (click)="addControltime()"></ion-icon>
+                        <ion-icon name="add-outline" style="color: forestgreen;padding-left: 2px; padding-right:2px ; size: 13px;" (click)="addControltime()"></ion-icon>
                     </div>
                 </ion-row>
                 <ion-row>
                     <ion-item lines="none" class="d-flex align-items-center">
-                        <ion-label>Wednesday</ion-label>
+                        <ion-label style="font-size: 12px;font-weight: 600;">Wednesday</ion-label>
                         <ion-checkbox checked="false" (ionChange)="onSelecteCheckBoxwed($event)" value="Wednesday" color="primary" slot="start">
                         </ion-checkbox>
                     </ion-item>
 
                     <form [formGroup]="myTimeFormwed" class="d-flex flex-column justify-content-center align-items-center">
-                        <div class="d-flex justify-content-between align-items-center" *ngFor="let control of myTimeFormwed.controls | keyvalue; let i=index" style="padding-right: 8px; padding-left: 10px;">
+                        <div class="d-flex justify-content-between align-items-center" *ngFor="let control of myTimeFormwed.controls | keyvalue; let i=index" style="padding-right: 2px; padding-left: 1px;">
 
-                            <ion-input *ngIf="checked2" size="4" class="form-control" (click)="wednesdaytime()" style="padding-bottom: 5px; padding-top: 5px; width: 110px; height: 35px;">
+                            <ion-input *ngIf="checked2" size="4" class="form-control" (click)="wednesdaytime()" style="padding-bottom: 5px;padding-top: 5px;width: 82px;font-size: 10px;height: 20px;">
                                 {{value1}}
                             </ion-input>
                             <ion-icon *ngIf="checked2" style="margin-left: 0.25rem; color: red;" (click)="removeControlTime2(control)" name="close-circle">
@@ -517,11 +522,11 @@
                     </form>
 
                     <div *ngIf="!checked2" class="d-flex align-items-center">
-                        <ion-label>Closed</ion-label>
+                        <ion-label style="font-size: 12px;font-weight: 600;">Closed</ion-label>
                     </div>
 
                     <div *ngIf="checked2" class="addbutton d-flex align-items-center flex-column justify-content-center">
-                        <ion-icon name="add-outline" style="color: forestgreen;padding-left:3px; padding-right:2px ; size: 13px;" (click)="addControltime2()"></ion-icon>
+                        <ion-icon name="add-outline" style="color: forestgreen;padding-right:2px ; size: 13px;" (click)="addControltime2()"></ion-icon>
                         <!-- <ion-icon name="add-circle-outline" (click)="addControltime()"></ion-icon> -->
                         <!-- <ion-button fill="clear" (click)="addControltime2()">+Add</ion-button> -->
                     </div>
@@ -529,16 +534,16 @@
 
                 <ion-row>
                     <ion-item lines="none" class="d-flex align-items-center">
-                        <ion-label>Thursday</ion-label>
+                        <ion-label style="font-size: 12px;font-weight: 600;">Thursday</ion-label>
                         <ion-checkbox checked="false" (ionChange)="onSelecteCheckBoxthurs($event)" slot="start"></ion-checkbox>
                     </ion-item>
 
                     <form [formGroup]="myTimeFormthurs" class="d-flex flex-column justify-content-center align-items-center">
-                        <div class="d-flex justify-content-between align-items-center" *ngFor="let control of myTimeFormthurs.controls | keyvalue; let i=index" style="padding-right: 9px; padding-left: 25px;">
+                        <div class="d-flex justify-content-between align-items-center" *ngFor="let control of myTimeFormthurs.controls | keyvalue; let i=index" style="padding-right: 2px; padding-left: 11px;">
                             <!-- <ion-datetime placeholder="End" (click)="thursdaytime()" [formControlName]="control.key">
                             </ion-datetime> -->
                             <!-- <ion-label class="form-control" (click)="thursdaytime()">{{value}}</ion-label> -->
-                            <ion-input *ngIf="checked3" size="4" class="form-control" (click)="thursdaytime()" style="padding-bottom: 5px; padding-top: 5px; width: 110px; height: 35px;">
+                            <ion-input *ngIf="checked3" size="4" class="form-control" (click)="thursdaytime()" style="padding-bottom: 5px;padding-top: 5px;width: 82px;font-size: 10px;height: 20px;">
                                 {{value0}}
                             </ion-input>
                             <ion-icon *ngIf="checked3" style="margin-left: 0.25rem; color: red;" (click)="removeControlTime3(control)" name="close-circle">
@@ -547,24 +552,24 @@
                     </form>
 
                     <div *ngIf="!checked3" class="d-flex align-items-center">
-                        <ion-label>Closed</ion-label>
+                        <ion-label style="font-size: 12px;font-weight: 600; padding-left: 2px;">Closed</ion-label>
                     </div>
 
                     <div *ngIf="checked3" class="addbutton d-flex align-items-center">
-                        <ion-icon name="add-outline" style="color: forestgreen;padding-left:3px; padding-right:2px ; size: 13px;" (click)="addControltime3()"></ion-icon>
+                        <ion-icon name="add-outline" style="color: forestgreen;padding-left: 2px; padding-right:2px ; size: 13px;" (click)="addControltime3()"></ion-icon>
                     </div>
                 </ion-row>
                 <ion-row>
                     <ion-item lines="none" class="d-flex align-items-center">
-                        <ion-label>Friday</ion-label>
+                        <ion-label style="font-size: 12px;font-weight: 600;">Friday</ion-label>
                         <ion-checkbox checked="false" (ionChange)="onSelecteCheckBoxfri($event)" color="primary" slot="start">
                         </ion-checkbox>
                     </ion-item>
 
                     <form [formGroup]="myTimeFormfri" class="d-flex flex-column justify-content-center align-items-center">
-                        <div class="d-flex justify-content-between align-items-center" *ngFor="let control of myTimeFormfri.controls | keyvalue; let i=index" style="padding-right: 9px; padding-left: 46px;">
+                        <div class="d-flex justify-content-between align-items-center" *ngFor="let control of myTimeFormfri.controls | keyvalue; let i=index" style="padding-right: 2px; padding-left: 26px;">
                             <!-- <ion-label class="form-control" (click)="Fridaytime()">{{value4}}</ion-label> -->
-                            <ion-input *ngIf="checked4" size="4" class="form-control" (click)="Fridaytime()" style="padding-bottom: 5px; padding-top: 5px; width: 110px; height: 35px;">
+                            <ion-input *ngIf="checked4" size="4" class="form-control" (click)="Fridaytime()" style="padding-bottom: 5px;padding-top: 5px;width: 82px;font-size: 10px;height: 20px;">
                                 {{value4}}
                             </ion-input>
                             <ion-icon *ngIf="checked4" style="margin-left: 0.25rem; color: red;" (click)="removeControlTime4(control)" name="close-circle">
@@ -573,25 +578,25 @@
                     </form>
 
                     <div *ngIf="!checked4" class="d-flex align-items-center">
-                        <ion-label>Closed</ion-label>
+                        <ion-label style="font-size: 12px;font-weight: 600; padding-left: 2px;">Closed</ion-label>
                     </div>
 
                     <div *ngIf="checked4" class="addbutton d-flex align-items-center flex-column justify-content-center">
-                        <ion-icon name="add-outline" style="color: forestgreen;padding-left:3px; padding-right:2px ; size: 13px;" (click)="addControltime4()"></ion-icon>
+                        <ion-icon name="add-outline" style="color: forestgreen;padding-left: 2px; padding-right:2px ; size: 13px;" (click)="addControltime4()"></ion-icon>
                     </div>
                 </ion-row>
 
                 <ion-row>
                     <ion-item lines="none" class="d-flex align-items-center">
-                        <ion-label>Saturday</ion-label>
+                        <ion-label style="font-size: 12px;font-weight: 600;">Saturday</ion-label>
                         <ion-checkbox checked="false" (ionChange)="onSelecteCheckBoxsat($event)" color="primary" slot="start">
                         </ion-checkbox>
                     </ion-item>
 
                     <form [formGroup]="myTimeFormsat" class="d-flex flex-column justify-content-center align-items-center">
-                        <div class="d-flex justify-content-between align-items-center" *ngFor="let control of myTimeFormsat.controls | keyvalue; let i=index" style="padding-right: 9px; padding-left: 27px;">
+                        <div class="d-flex justify-content-between align-items-center" *ngFor="let control of myTimeFormsat.controls | keyvalue; let i=index" style="padding-right: 2px; padding-left: 11px;">
                             <!-- <ion-label class="form-control" (click)="saturdaytime()">{{value5}}</ion-label> -->
-                            <ion-input *ngIf="checked5" size="4" class="form-control" (click)="saturdaytime()" style="padding-bottom: 5px; padding-top: 5px; width: 110px; height: 35px;">
+                            <ion-input *ngIf="checked5" size="4" class="form-control" (click)="saturdaytime()" style="padding-bottom: 5px;padding-top: 5px;width: 82px;font-size: 10px;height: 20px;">
                                 {{value5}}
                             </ion-input>
                             <ion-icon *ngIf="checked5" style="margin-left: 0.25rem; color: red;" (click)="removeControlTime5(control)" name="close-circle">
@@ -606,24 +611,24 @@
                     </form> -->
 
                     <div *ngIf="!checked5" class="d-flex align-items-center">
-                        <ion-label>Closed</ion-label>
+                        <ion-label style="font-size: 12px;font-weight: 600; padding-left: 2px;">Closed</ion-label>
                     </div>
                     <div *ngIf="checked5" class="addbutton d-flex align-items-center flex-column justify-content-center">
-                        <ion-icon name="add-outline" style="color: forestgreen;padding-left:3px; padding-right:2px ; size: 13px;" (click)="addControltime5()"></ion-icon>
+                        <ion-icon name="add-outline" style="color: forestgreen;padding-left:2px; padding-right:2px ; size: 13px;" (click)="addControltime5()"></ion-icon>
                     </div>
                 </ion-row>
 
                 <ion-row>
                     <ion-item lines="none" class="d-flex align-items-center">
-                        <ion-label>Sunday</ion-label>
+                        <ion-label style="font-size: 12px;font-weight: 600;">Sunday</ion-label>
                         <ion-checkbox checked="false" (ionChange)="onSelecteCheckBoxsun($event)" color="primary" slot="start">
                         </ion-checkbox>
                     </ion-item>
 
                     <form [formGroup]="myTimeFormsun" class="d-flex flex-column justify-content-center align-items-center">
-                        <div class="d-flex justify-content-between align-items-center" *ngFor="let control of myTimeFormsun.controls | keyvalue; let i=index" style="padding-right: 9px; padding-left: 39px;">
+                        <div class="d-flex justify-content-between align-items-center" *ngFor="let control of myTimeFormsun.controls | keyvalue; let i=index" style="padding-right: 2px; padding-left: 17px;">
                             <!-- <ion-label class="form-control" (click)="sundaytime()">{{value6}}</ion-label> -->
-                            <ion-input *ngIf="checked6" size="4" class="form-control" (click)="sundaytime()" style="padding-bottom: 5px; padding-top: 5px; width: 110px; height: 35px;">
+                            <ion-input *ngIf="checked6" size="4" class="form-control" (click)="sundaytime()" style="padding-bottom: 5px;padding-top: 5px;width: 82px;font-size: 10px;height: 20px;">
                                 {{value6}}
                             </ion-input>
                             <ion-icon *ngIf="checked6" style="margin-left: 0.25rem;color: red;" (click)="removeControlTime6(control)" name="close-circle">
@@ -637,11 +642,11 @@
                         </div>
                     </form> -->
                     <div *ngIf="!checked6" class="d-flex align-items-center">
-                        <ion-label>Closed</ion-label>
+                        <ion-label style="font-size: 12px;font-weight: 600;padding-left: 1px;">Closed</ion-label>
                     </div>
 
                     <div *ngIf="checked6" class="addbutton d-flex align-items-center flex-column justify-content-center">
-                        <ion-icon name="add-outline" style="color: forestgreen;padding-left:3px; padding-right:2px ; size: 13px;"(click)="addControltime6()"></ion-icon>
+                        <ion-icon name="add-outline" style="color: forestgreen;padding-left:2px; padding-right:2px ; size: 13px;"(click)="addControltime6()"></ion-icon>
                     </div>
                 </ion-row>
 
@@ -692,7 +697,7 @@
                     <div class="signin2">
                         <img src="assets/signin 2.png" alt="saloo2-logo">
                     </div>
-                    <ion-button class="btnSubmit textBold ion-text-uppercase ion-padding-horizontal" (click)="save()">Save
+                    <ion-button class="btnSubmit textBold ion-text-uppercase ion-padding-horizontal" (click)="register()">Register
                         <!--<ion-icon slot="end" name="chevron-forward"></ion-icon>-->
                     </ion-button>
                 </ion-card>

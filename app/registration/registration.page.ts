@@ -395,13 +395,8 @@ export class RegistrationPage implements OnInit {
 
 
   register() {
-    // this.user.latitude = this.api.latitude;
-    // this.user.longitude = this.api.longitude;
-    // this.user.address = this.api.address;
-    //this.user.address = this.api.address + this.api.city
-
     const client = {
-      id: this.api.id,
+      id: this.userProvide.loggedUser.id,
       name: this.user.name,
       bussinessname: this.user.businessname,
       Email: this.user.Email,
@@ -624,9 +619,6 @@ export class RegistrationPage implements OnInit {
   }
   AccessGallery() {
     this.api.openGallery();
-  }
-  save() {
-    this.router.navigate(['/home'])
   }
   skip() {
     this.router.navigate(['/home'])

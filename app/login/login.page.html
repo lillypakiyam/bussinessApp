@@ -1,3 +1,24 @@
+<!-- <ion-header>
+</ion-header>
+<ion-content class="backgroundImage">
+    <br>
+    <div class="phonenumber">
+        
+        <ion-input class="form-control" *ngIf="!otpsend" type="number" [(ngModel)]="user.Phone" placeholder="Enter Phone number">
+        </ion-input>
+        <ion-input class="form-control" *ngIf="otpsend" type="string" [(ngModel)]="otp" placeholder="Enter the OTP">
+        </ion-input>
+    </div>
+    <div id="recaptcha-container" class="ion-padding-top" style="display: none;">
+    </div>
+    <br>
+    <div class="otpbutton">
+        <ion-button fill="clear" style="width: 230px;" class="btn btn-outline-info" shape="round" *ngIf="otpsend" (click)="verifyotp()">verifyotp</ion-button>
+        <ion-button fill="clear" style="width: 230px;" class="btn btn-outline-info" shape="round" *ngIf="!otpsend" (click)="Otp()">Send OTP</ion-button>
+ 
+    </div>
+</ion-content> -->
+
 <ion-toolbar>
     <div class="back-circle"> </div>
 </ion-toolbar>
@@ -29,8 +50,8 @@
 </ion-content>
 <ion-footer class="ion-no-border">
     <ion-toolbar>
-        <p class="ion-text-center custom-font" (click)=addvalue()>
-            <ion-checkbox [checked]="checked" value="agree"></ion-checkbox> I agree with <a href="privacy"> terms and
+        <p class="ion-text-center custom-font">
+            <ion-checkbox [checked]="checked" (ionChange)="addvalue()" value="agree"></ion-checkbox> I agree with <a href="privacy"> terms and
         conditions</a>
         </p>
     </ion-toolbar>
